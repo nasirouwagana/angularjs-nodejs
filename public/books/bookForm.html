@@ -1,0 +1,31 @@
+<form class="form-horizontal" role="form" name="bookForm" novalidate>
+    <div class="form-group">
+        <div class="col-md-10">
+            <p ng-show="bookForm.title.$error.required" class="text-warning"><strong>Champ obligatoire</strong></p>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" ng-model="book.title" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <textarea class="form-control" id="description" name="description" placeholder="Description" 
+                      ng-model="book.description">
+            </textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <select id="level" name="level" class="form-control" 
+                    ng-model="book.level" 
+                    ng-options="level for level in levels">
+                <option value="">-- choose level --</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="btn-group" style="margin-bottom: 20px;">
+        <button type="button" class="btn btn-default" ng-click="newBook()">New</button>
+        <button type="button" class="btn btn-default btn-success" ng-click="saveBook(book)" ng-disabled="bookForm.$invalid">Save</button>
+        <button type="button" class="btn btn-default btn-danger" ng-click="deleteBook(book._id)">Delete</button>
+    </div>
+
+</form>

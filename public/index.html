@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning AngularJS - Books Case</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    </head>
+    <body ng-app="booksApp" class="container">
+
+        <div class="container" style="margin-top: 20px;">
+            <ul class="breadcrumb">
+                <li><a href="#/actualites">Actualités</a></li>
+                <li><a href="#/coupsdecoeur">Coup de coeur</a></li>
+            </ul>
+        </div>
+
+        <div ng-controller="MainCtrl" class="container" style="margin-top: 20px;">
+            <div class="panel panel-default">
+                <div class="panel-heading">AngularJS Learning - Book Case</div>
+                <div class="panel-body">
+                    <h2 class="page-header" style="margin-top: 0px">Books</h2>
+
+                    <div class="col-md-4" ng-include="'books/bookForm.html'"></div>
+
+                    <div class="col-md-8" ng-include="'books/bookList.html'"></div>
+                </div>
+            </div>          
+        </div> 
+
+        <div ng-view class="container"></div>
+
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <script type="text/javascript" src="js/factories/Models.js"></script>
+        <script type="text/javascript" src="js/factories/Book.js"></script>
+
+        <script type="text/javascript" src="js/controllers/AdditionCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/ActualitesCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/CoupsDeCoeurCtrl.js"></script>
+
+        <script type="text/javascript" src="js/controllers/MainCtrl.js"></script>        
+
+    </body>
+</html>

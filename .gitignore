@@ -1,0 +1,4 @@
+node_modules/*
+nbproject/*
+old_scripts/*
+public/bower_components/*

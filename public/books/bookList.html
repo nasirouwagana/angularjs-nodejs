@@ -1,0 +1,32 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Title
+                <input ng-model="search.$" placeholder="Search one book" class="form-control">
+            </th>
+            <th>
+                Description
+                <input ng-model="search.description" placeholder="By description" class="form-control">
+            </th>
+            <th>
+                Level
+                <select ng-model="search.level" 
+                        ng-options="level for level in levels"
+                        class="form-control">
+                </select>
+            </th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr 
+            ng-repeat="book in books| filter:search:strict"
+            ng-click="selectBook(book)">
+            <td><a href="#">{{book.title}}</a></td>
+            <td>{{book.description}}</td>
+            <td><strong>{{book.level| stars}}</strong></td>
+            <td>{{book._id}}</td>
+        </tr>
+    </tbody>
+</table>

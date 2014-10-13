@@ -1,0 +1,22 @@
+{
+  "name": "angularjs",
+  "version": "0.0.0",
+  "authors": [
+    "WAGANA Nasirou <wnasirou@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-resource": "",
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.23"
+  }
+}
