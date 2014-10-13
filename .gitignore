@@ -1,3 +1,5 @@
+# Files to ignore
+
 node_modules/*
 nbproject/*
 old_scripts/*
